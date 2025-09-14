@@ -21,6 +21,7 @@ async function personalised({ course, role, wordLimit }: Props) {
 
   const llm = new ChatOllama({
     model: "phi3",
+    temperature: 0,
   });
   const outputParser = new StringOutputParser();
 
