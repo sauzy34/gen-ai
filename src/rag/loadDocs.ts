@@ -1,5 +1,5 @@
 import { Document } from "langchain/document";
-import { crawlLangchainDocsUrls } from "./crawDocs";
+import { crawlLangchainDocsUrls } from "./crawlDocs";
 import { CheerioWebBaseLoader } from "@langchain/community/document_loaders/web/cheerio";
 import cliProgress from "cli-progress";
 
@@ -23,6 +23,3 @@ export async function loadDocs(): Promise<Document[]> {
   console.log(`${rawDocs} docs loaded.`);
   return rawDocs;
 }
-
-const rawDocs = await loadDocs();
-console.log({ rawDocs: rawDocs.slice(0, 4) });
