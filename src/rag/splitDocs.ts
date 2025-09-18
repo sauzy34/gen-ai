@@ -16,7 +16,3 @@ export async function splitDocs(docs: Document[]) {
 
   return chunks;
 }
-
-const docs = await loadDocs();
-
-await splitDocs(docs);
